@@ -2,6 +2,8 @@
 
 Version Android de [WikikIRC](https://wiki.labomedia.org/index.php/WikikIRC)
 
+## Réalisé avec Kivy et Buildozer
+
 ### Python 2.7
 Sur debian strectch 9.4 dans VirtualBox
 
