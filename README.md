@@ -42,3 +42,9 @@ All files are under GNU GENERAL PUBLIC LICENSE Version 3
 La taille des polices de texte est définie en dpi, mais ça marche mal !
 
 #### Du coup le texte déborde parfois de l'écran
+
+### Merci à
+* [La Labomedia](https://labomedia.org/)
+* [Le Centre Ressources](https://wiki.labomedia.org/index.php/Accueil)
+* [Les Open Ateliers](https://openatelier.labomedia.org/)
+* [Le FabLab Atelier du C01N](https://atelierduc01n.labomedia.org/)
