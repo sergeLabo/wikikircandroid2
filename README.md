@@ -4,10 +4,13 @@ Version Android de [WikikIRC](https://wiki.labomedia.org/index.php/WikikIRC)
 
 ## Réalisé avec Kivy et Buildozer
 
+Le but de ce projet est de vérifier que buildozer compile bien sur mon PC,
+ de se faire plaisir, d'épater la gallerie, de rendre hommage aux bienveillants créateurs de WikikIRC.
+
 ### Python 2.7
 Sur debian strectch 9.4 dans VirtualBox
 
-Buildozer en python 3.5 ne supporterais pas openssl
+Buildozer en python 3.5 ne supporterait pas openssl
 
 ### Quelle version de l'interpréteur python ?
 
@@ -28,5 +31,14 @@ La compilation est très longue, beaucoup plus qu'un certain temps.
 ### IRC
 Pas d'import, les fichiers sont dans le dossier.
 
+### Licence
+
+wikikircandroid2 is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+All files are under GNU GENERAL PUBLIC LICENSE Version 3
+
 ### Bug connu
+#### Bug de kivy
 La taille des polices de texte est définie en dpi, mais ça marche mal !
+
+#### Du coup le texte déborde parfois de l'écran

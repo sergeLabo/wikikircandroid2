@@ -1,14 +1,34 @@
 #!/usr/bin/python2
 # -*- coding: utf8 -*-
 
-## wikikIRC3.py
+# wikikIRC2.py
+# python2
+# Pas d'accent pour mettre toute les chances de mon cote à la compil
 
+########################################################################
+# This file is part of wikikircandroid2.
+#
+# wikikircandroid2 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# wikikircandroid2 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with wikikircandroid2.  If not, see <http://www.gnu.org/licenses/>.
+#
 # WikikIRC by Olivier Baudu, Anthony Templier for Labomedia September 2011.
 # Modified by Sylvain Blocquaux 2012.
 # Improved by SergeBlender for Labomedia June 2014.
 # olivier arobase labomedia point net // http://lamomedia.net
 # Published under License GPLv3: http://www.gnu.org/licenses/gpl-3.0.html
-# Modifier SergeBlender pour wikikircandroid
+# Modification SergeBlender pour wikikircandroid mars 2018
+#
+########################################################################
 
 """
 Recupere les modifications en temps reel sur Wikipedia.fr
@@ -35,7 +55,6 @@ REPLACE =   [
             "  ", "   ",
             "align ", "left", "valign", "top", "_"
             ]
-            #"•"
 
 FIRST = [
             "=", "[", "{", "#", "<", ":", "!"

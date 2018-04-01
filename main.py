@@ -1,6 +1,23 @@
 #! /usr/bin/env python2
 # -*- coding: utf-8 -*-
 
+# Pas d'accent pour mettre toute les chances de mon cote à la compil
+
+########################################################################
+# This file is part of wikikircandroid2.
+#
+# wikikircandroid2 is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# wikikircandroid2 is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+########################################################################
+
 
 import os
 import threading
@@ -11,7 +28,7 @@ kivy.require('1.10.0')
 
 from kivy.core.window import Window
 
-# ## La ligne ci-dessous est a commenter pour buildozer
+# ## Les lignes ci-dessous sont à commenter pour buildozer
 # #k = 1
 # #WS = int(720*k), int(1280*k)
 # #Window.size = WS
