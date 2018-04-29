@@ -19,19 +19,14 @@
 ########################################################################
 
 
-import os
-import threading
+from os import _exit
+from threading import Thread
 import textwrap
 
 import kivy
 kivy.require('1.10.0')
 
 from kivy.core.window import Window
-
-# ## Les lignes ci-dessous sont à commenter pour buildozer
-# #k = 1
-# #WS = int(720*k), int(1280*k)
-# #Window.size = WS
 
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -44,6 +39,19 @@ from kivy.core.audio import SoundLoader
 from wikikIRC2 import MyIRCBot
 from note import Note
 
+
+from sys import platform
+
+# non inclus dans apk version 0.5
+print("Platform = {}".format(platform))
+
+# Window size sur PC
+if platform == 'linux2':
+    k = 0.6
+    WS = (int(720*k), int(1280*k))
+    Window.size = WS
+
+    
 class WikikIRC:
 
     def __init__(self):
@@ -69,7 +77,7 @@ class WikikIRC:
         self.bot.start()
         
     def get_modif_thread(self):
-        thread_s = threading.Thread(target=self.get_modif)
+        thread_s = Thread(target=self.get_modif)
         thread_s.start()
 
 
@@ -97,10 +105,6 @@ class MainScreen(Screen, WikikIRC):
         # Rafraichissement du jeu
         tempo = 0.03
         
-        # test pour affichage correct
-        # #self.test = 0
-        # #self.fois = 0
-        
         self.event = Clock.schedule_interval(self.wikirc_update, tempo)   
                   
         print("Initialisation de MainScreen ok")
@@ -113,14 +117,6 @@ class MainScreen(Screen, WikikIRC):
         # Sortie IRC
         try:
             wo = self.bot.wiki_out
-            
-            # test pour affichage correct 
-            # #a = "ghg l'agfghu nn dfhgjit n fg jj ggg hhhh"
-            # #wo = a * self.fois
-            # #self.test += 1
-            
-            # #if self.test % 20 == 0:
-                # #self.fois += 1
             
             if 600 < len(wo) <= 1000:
                 self.f_size = 14 #28
@@ -208,7 +204,7 @@ class WikikircAndroidApp(App):
         WikikircAndroidApp.get_running_app().stop()
 
         # Extinction de tout
-        os._exit(0)
+        _exit(0)
 
 
 if __name__ == '__main__':

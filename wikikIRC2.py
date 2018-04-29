@@ -44,7 +44,7 @@ mybot.wiki_out
 import re
 
 from urllib2 import urlopen, Request
-import string
+from string import replace
 import xml.etree.ElementTree as ET
 
 from irc.bot import SingleServerIRCBot
@@ -143,7 +143,7 @@ class MyIRCBot(SingleServerIRCBot):
                     # Suppression de gri-gri
                     for i in REPLACE:
                         #line = line.replace(i, ' ')
-                        line = string.replace(line, i, ' ')
+                        line = replace(line, i, ' ')
                         
                         # Suppression d'un espace en premier caractere
                         if len(line) > 0:

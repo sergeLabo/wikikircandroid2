@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = WikikIRC
+title = WikikIRC2
 
 # (str) Package name
-package.name = wikikircandroid
+package.name = wikikircandroid2
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = labomedia.org
@@ -13,10 +13,10 @@ package.domain = labomedia.org
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,kv,ogg
+source.include_exts = py,kv,ogg,png
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = samples/*.ogg, irc/*
+source.include_patterns = samples/*.ogg, irc/*, data/*.png,
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -28,39 +28,9 @@ source.include_patterns = samples/*.ogg, irc/*
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version=0.65
+version=0.67
 
-# 0.65 disk 20 Go reprise compil
-# 0.64 avec openssl compil trop longue
-# 0.63 correction get_page
-# 0.62 dossier dans home
-# 0.61 vb 2.7
-# 0.60 text plus petit
-# 0.59 window correct
-# 0.58 affichage correct
-# 0.57 sans print
-# 0.56 textwrap 40
-# 0.55 suppression des accents
-# 0.54 retour python 2.7 pb avec openssl sur python3crystax==3.5 et crystax-ndk-10.3.2
-# openssl sera bon dans crystax-ndk-11
-# 0.53 ajout requirements openssl
-# 0.52 suppr decode()
-# 0.51 import urllib.error
-# 0.50 recherche erreur
-# 0.49 permisions ,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
-# 0.48 avec print pour suivi requete android
-# 0.47 avec try
-# 0.46 correction print l152
-# 0.45 import xml.etree.ElementTree as ET, pas de requ=xml
-# 0.44 import lxml + appel lxml.etree
-# 0.43 import lxml
-# 0.42 lxml en requirements, avec from lxml import etree
-# 0.41 lxml en requirements, sans import
-# 0.39 sans lxml
-# 0.38 retour avec lxml sans utilisation
-# 0.37 utilisation lxml
-# 0.35 ajout lxml sans utilisation --> ok
-# 0.34 avec pytohn3.5 , buildozer 0.34
+# 0.67 avec logo icon
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -78,10 +48,10 @@ requirements = kivy,openssl
 #garden_requirements =
 
 # (str) Presplash of the application
-#presplash.filename = %(source.dir)s/data/logo_labomedia.png
+presplash.filename = %(source.dir)s/data/logo_labomedia.png
 
 # (str) Icon of the application
-#icon.filename = %(source.dir)s/data/multipong.png
+icon.filename = %(source.dir)s/data/wikikirc.png
 
 # (str) Supported orientation (one of landscape, portrait or all)
 orientation = portrait
@@ -101,7 +71,7 @@ fullscreen = 1
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-android.presplash_color = fuchsia
+# android.presplash_color = fuchsia
 
 # (list) Permissions ,ACCESS_NETWORK_STATE,ACCESS_WIFI_STATE
 android.permissions = INTERNET
@@ -116,14 +86,14 @@ android.permissions = INTERNET
 #android.sdk = 26
 
 # (str) Android NDK version to use
-android.ndk = 10.3.2
+#android.ndk = 10.3.2
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
 #android.ndk_path = /media/data/3D/Documents/crystax-ndk-10.3.2
-android.ndk_path = /media/sf_3D/Documents/crystax-ndk-10.3.2
+#android.ndk_path = /media/sf_3D/Documents/crystax-ndk-10.3.2
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 #android.sdk_path = /home/pierre/Android/Sdk
